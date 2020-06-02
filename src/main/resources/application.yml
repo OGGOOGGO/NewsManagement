@@ -1,0 +1,22 @@
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    password: hujing19960825
+    username: hujing
+    url: jdbc:mysql://localhost:3307/news-management?characterEncoding=UTF-8&useSSL=false&serverTimeZone=Hongkong&autoReconnect=true&allowMultiQueries=true
+    type: com.zaxxer.hikari.HikariDataSource
+  application:
+    name: news-management
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+        exclude: ['shutdown']
+  endpoint:
+    health:
+      show-details: always
+server:
+  port: 10000
+  servlet:
+    context-path: /newsManagement
